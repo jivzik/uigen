@@ -69,6 +69,7 @@ jobs:
           # assignee_trigger: "claude-bot"
 
           # Optional: Configure Claude's behavior with CLI arguments
+          show_full_output: true
           claude_args: |
             --allowedTools "Bash(npm install),Bash(npm run dev),Bash(npm run build),Bash(npm run test),Bash(npm run lint),Bash(sqlite3:*),Edit,Read,Write,Glob,Grep,mcp__playwright__browser_navigate,mcp__playwright__browser_click,mcp__playwright__browser_snapshot,mcp__playwright__browser_take_screenshot,mcp__playwright__browser_fill_form,mcp__playwright__browser_select_option,mcp__playwright__browser_wait_for"
 
