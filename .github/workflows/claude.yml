@@ -62,8 +62,6 @@ jobs:
               }
             }
 
-          allowed_tools: "Bash(npm install),Bash(npm run dev),Bash(npm run build),Bash(npm run test),Bash(npm run lint),Bash(sqlite3:*),Edit,Read,Write,Glob,Grep,mcp__playwright__browser_navigate,mcp__playwright__browser_click,mcp__playwright__browser_snapshot,mcp__playwright__browser_take_screenshot,mcp__playwright__browser_fill_form,mcp__playwright__browser_select_option,mcp__playwright__browser_wait_for"
-
           # Optional: Customize the trigger phrase (default: @claude)
           # trigger_phrase: "/claude"
 
@@ -71,11 +69,8 @@ jobs:
           # assignee_trigger: "claude-bot"
 
           # Optional: Configure Claude's behavior with CLI arguments
-          # claude_args: |
-          #   --model claude-opus-4-1-20250805
-          #   --max-turns 10
-          #   --allowedTools "Bash(npm install),Bash(npm run build),Bash(npm run test:*),Bash(npm run lint:*)"
-          #   --system-prompt "Follow our coding standards. Ensure all new code has tests. Use TypeScript for new files."
+          claude_args: |
+            --allowedTools "Bash(npm install),Bash(npm run dev),Bash(npm run build),Bash(npm run test),Bash(npm run lint),Bash(sqlite3:*),Edit,Read,Write,Glob,Grep,mcp__playwright__browser_navigate,mcp__playwright__browser_click,mcp__playwright__browser_snapshot,mcp__playwright__browser_take_screenshot,mcp__playwright__browser_fill_form,mcp__playwright__browser_select_option,mcp__playwright__browser_wait_for"
 
           # Optional: Advanced settings configuration
           # settings: |
